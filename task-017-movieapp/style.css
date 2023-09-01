@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: #22254b; /*secondary */
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #373b69;
+    font-size: 1.5rem;
+    padding: 16px;
+
+}
+
+header h1{
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+header .search{
+    background: #373b69;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    outline-color: #22254b;
+}
+
+.main{
+    display :flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.movies{
+    display :flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #373b69;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    width: 300px;
+    height: 520px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin:1rem;
+    position: relative;
+}
+
+.title-card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color:#eee;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.title-card h3 {
+    font-size: 1rem;
+}
+
+.title-card span {
+    background-color: #22254b;
+    padding: 0.5rem;
+}
+.title-card span.green {
+    color: green;
+}
+.title-card span.orange {
+    color: orange;
+}
+.title-card span.red {
+    color: red;
+}
+
+.movies img{
+    background-color: #373b69;
+    width: 300px;
+}
+
+.overview h2{
+    margin-bottom: 15px;
+}
+.overview{   
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: inherit;
+    line-height: 1.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    overflow: hidden;
+    transition: transform 0.3s ease-in;
+}
+
+.movies:hover .overview.show {
+    transform: translateY(0);
+}
