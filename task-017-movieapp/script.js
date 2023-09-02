@@ -11,9 +11,8 @@ const formElement = document.getElementById('form');
 
 const showMovieCards = (movies) => {
     let moviesArr = [];
-
     console.log(movies);
-    // mainElement.innerHTML = null;
+    mainElement[0].innerHTML = '';console.log(mainElement.childElementCount);
 
     if (!movies) return mainElement.innerHTML = 'Empty';
 
@@ -34,7 +33,7 @@ const showMovieCards = (movies) => {
         }
 
         moviesElement.innerHTML = `
-        <img src=${TMDB_IMAGE_URL}/${poster_path} alt=${title}>
+        <img src=${TMDB_IMAGE_URL}/${poster_path && poster_path} alt=${title}>
         <div class="title-card">
         <h3>${title}</h3>
         <span class = ${spanColor}>${vote_average}</span>
@@ -53,16 +52,16 @@ const showMovieCards = (movies) => {
     });
 };
 
-const getMovies = async () => {
-    const response = await axios(`${TMDB_MOVIE_LIST_API}&language=en-US&page=1&include_adult=false`);
+const getMovies = async (url) => {
+    const response = await axios(url);
     showMovieCards(response.data.results);
 };
-getMovies();
+
+getMovies(`${TMDB_MOVIE_LIST_API}&language=en-US&page=1&include_adult=false`);
 
 formElement.addEventListener("submit", async (e) => {
     e.preventDefault();
     alert("ok");
     const searchValue = document.getElementById("search").value;
-    const response = await axios(`https://api.themoviedb.org/3/search/movie?query=${searchValue}&api_key=${API_KEY}&language=en-US&page=1&include_adult=false`);
-    showMovieCards(response.data.results);
+    getMovies(`https://api.themoviedb.org/3/search/movie?query=${searchValue}&api_key=${API_KEY}&language=en-US&page=1&include_adult=false`);
 });
