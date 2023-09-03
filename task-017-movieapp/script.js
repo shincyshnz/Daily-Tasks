@@ -61,7 +61,7 @@ getMovies(`${TMDB_MOVIE_LIST_API}&language=en-US&page=1&include_adult=false`);
 
 formElement.addEventListener("submit", async (e) => {
     e.preventDefault();
-    alert("ok");
     const searchValue = document.getElementById("search").value;
+    if(!searchValue) return;
     getMovies(`https://api.themoviedb.org/3/search/movie?query=${searchValue}&api_key=${API_KEY}&language=en-US&page=1&include_adult=false`);
 });
