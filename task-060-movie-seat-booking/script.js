@@ -12,6 +12,10 @@ const rows = document.querySelectorAll('.row');
 Object.values(rows).forEach(row => {
     row.addEventListener('click', (e) => {
         const element = e.target;
+        if (element.classList.value.includes("occupied")) {
+            return;
+        }
+
         if (element.classList.value.includes("selected")) {
             element.classList.toggle("selected");
             count--;
@@ -19,7 +23,7 @@ Object.values(rows).forEach(row => {
             element.classList.toggle("selected");
             count++;
         }
-        countSpanElement.innerHTML = count ;
+        countSpanElement.innerHTML = count;
         totalSpanElement.innerHTML = count * totalmoviePrice;
     });
 });
