@@ -33,3 +33,15 @@ movieSelect.addEventListener('change', (e) => {
     totalSpanElement.innerHTML = count * totalmoviePrice;
 });
 
+// const fruits = [{ apple: 3 }, { banana: 3 }, { apple: 4 }]
+// const sum = {};
+// fruits.forEach(fruitObj =>{
+//     for(const fruit in fruitObj){
+//         if(sum.hasOwnProperty(fruit)){
+//             sum[fruit] += fruitObj[fruit];
+//         }else{
+//             sum[fruit] = fruitObj[fruit];
+//         }
+//     }
+// });
+// console.log(sum);
