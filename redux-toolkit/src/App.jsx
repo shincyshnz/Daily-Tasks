@@ -1,9 +1,7 @@
-import CounterUseReducer from './components/CounterUseReducer'
-import Header from './components/Header/Header'
-import ProductList from './components/ProductList/ProductList'
+
+import { CounterUseReducer, Header, ProductList } from "./components";
 
 function App() {
-
   return (
     <>
       {/* <h1>UseReducer Task</h1>
@@ -12,7 +10,7 @@ function App() {
       <Header />
       <ProductList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
