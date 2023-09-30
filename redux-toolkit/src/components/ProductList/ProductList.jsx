@@ -3,7 +3,6 @@ import products from "../../api/product.json";
 import "./ProductList.css";
 import { useSelector } from "react-redux";
 import { CartButton } from "..";
-import cart from "../../redux/cart";
 
 const productList = () => {
   // fetch states from redux using useSelector hook
