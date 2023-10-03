@@ -8,15 +8,8 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { orange, yellow } from "@mui/material/colors";
+import { theme } from "./Theme/theme.js";
 
-const theme = createTheme({
-  palette: {
-    mode:'light',
-    primary: orange,
-    secondary: yellow,
-  },
-});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
