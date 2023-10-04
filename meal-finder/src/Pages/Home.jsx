@@ -1,7 +1,8 @@
 import React from "react";
-import { Banner, NavBar } from "../components";
-import { Container, Input } from "@mui/material";
+import { Banner, Cards, NavBar } from "../components";
+import { Box, Container } from "@mui/material";
 import Intro from "../components/Intro";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -10,8 +11,10 @@ const Home = () => {
         <NavBar />
         <main>
           <Banner />
-          <Intro />
+
+          <Cards />
         </main>
+        <Footer />
       </Container>
     </>
   );

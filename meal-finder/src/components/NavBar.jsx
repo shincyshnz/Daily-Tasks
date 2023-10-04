@@ -10,10 +10,10 @@ import {
   MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from "../assets/images/logo.png";
 import { grey } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import { Link as RouterLink } from "react-router-dom";
+import Logo from "./Logo";
 
 const pages = ["Products", "Pricing", "Blog"];
 
@@ -51,29 +51,11 @@ function NavBar() {
           sx={{
             textDecoration: "none",
             color: "inherit",
+            marginTop: "10px",
           }}
         >
-          <Box
-            component="img"
-            sx={{ height: 45, mx: 2 }}
-            alt="Logo"
-            src={logo}
-          ></Box>
-          <Typography
-            variant="h5"
-            fontSize={{ xs: 18, md: 22, lg:25 }}
-            noWrap
-            sx={{
-              mr: 2,
-              display: { md: "flex" },
-              letterSpacing: ".1rem",
-              fontWeight: "light",
-            }}
-          >
-            Minimalist
-            <span style={{ color: "orange", fontWeight: "normal" }}>Meals</span>
-          </Typography>
-
+          <Logo />
+          
           <Box
             sx={{
               flexGrow: 1,
@@ -123,11 +105,11 @@ function NavBar() {
               display: { xs: "none", md: "flex" },
               justifyContent: "flex-end",
               gap: 2,
-              fontSize : { xs: 10, md: 20, lg:22 },
+              fontSize: { xs: 10, md: 20, lg: 22 },
             }}
           >
             {pages.map((page, index) => (
-              <NavLinks component={RouterLink} key={index} to="/" >
+              <NavLinks component={RouterLink} key={index} to="/">
                 {page}
               </NavLinks>
             ))}
