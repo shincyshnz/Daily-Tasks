@@ -5,9 +5,9 @@ import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined";
 import KebabDiningOutlinedIcon from "@mui/icons-material/KebabDiningOutlined";
 import SoupKitchenOutlinedIcon from "@mui/icons-material/SoupKitchenOutlined";
 import RamenDiningOutlinedIcon from "@mui/icons-material/RamenDiningOutlined";
-import MenuBookOutlinedIcon from '@mui/icons-material/MenuBookOutlined';
-import VolunteerActivismOutlinedIcon from '@mui/icons-material/VolunteerActivismOutlined';
-import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import MenuBookOutlinedIcon from "@mui/icons-material/MenuBookOutlined";
+import VolunteerActivismOutlinedIcon from "@mui/icons-material/VolunteerActivismOutlined";
+import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 
 import bannerImage from "../assets/images/meal-hd.jpg";
 import sideImage from "../assets/images/grilled.jpg";
@@ -54,13 +54,13 @@ const Banner = () => {
         "Serve the food you have cooked, then enjoy the meal with your loved ones.",
     },
   ];
-  
+
   const imageURL = "./src/assets/images/bgFood.jpg";
 
   return (
     <>
       <Grid container sx={gridStyle}>
-        <Grid item xs={6} letterSpacing={{ xs: 2 }}>
+        <Grid item xs={12} md={6} letterSpacing={{ xs: 2 }}>
           <Typography
             variant="h3"
             gutterBottom
@@ -80,17 +80,17 @@ const Banner = () => {
           </Typography>
         </Grid>
 
-        <Grid item xs={4} position="relative">
+        <Grid item xs={12} md={4} position="relative">
           <Box
             component="img"
-            width={{ xs: "100%", md: "120%" }}
+            width={{ xs: "100%", md: "100%", lg: "120%" }}
             alt="Logo"
             src={bannerImage}
           ></Box>
 
           <Box
-            top={{ xs: 30, lg: 40 }}
-            left={{ xs: 30, lg: 40 }}
+            top={{ xs: 10, md: 0, lg: 40 }}
+            left={{ xs: 10, md: 0, lg: 40 }}
             sx={theme.floatingIconStyle}
           >
             <Box
@@ -142,7 +142,6 @@ const Banner = () => {
                 </Box>
               </Stack>
             </Box> */}
-
           </Grid>
 
           <Grid item xs={12} md={6}>

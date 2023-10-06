@@ -38,6 +38,7 @@ function NavBar() {
   };
 
   const handleCloseNavMenu = () => {
+    event.preventDefault();
     setAnchorElNav(null);
   };
 
@@ -47,7 +48,7 @@ function NavBar() {
         <Toolbar
           disableGutters
           component="a"
-          href="#"
+          href="/"
           sx={{
             textDecoration: "none",
             color: "inherit",

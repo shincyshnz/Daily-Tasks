@@ -1,21 +1,14 @@
 import React from "react";
-import { Banner, Cards, NavBar } from "../components";
-import { Box, Container } from "@mui/material";
-import Intro from "../components/Intro";
-import Footer from "../components/Footer";
+import { Banner } from "../components";
+import Categories from "../components/Categories";
 
 const Home = () => {
   return (
     <>
-      <Container maxWidth="1400px">
-        <NavBar />
         <main>
           <Banner />
-
-          <Cards />
+          <Categories />
         </main>
-        <Footer />
-      </Container>
     </>
   );
 };
