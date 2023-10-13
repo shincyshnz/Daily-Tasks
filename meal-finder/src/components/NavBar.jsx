@@ -47,8 +47,6 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar
           disableGutters
-          component="a"
-          href="/"
           sx={{
             textDecoration: "none",
             color: "inherit",
@@ -56,7 +54,7 @@ function NavBar() {
           }}
         >
           <Logo />
-          
+
           <Box
             sx={{
               flexGrow: 1,

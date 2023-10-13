@@ -6,7 +6,7 @@ export const theme = createTheme({
         mode: 'light',
         primary: orange,
         secondary: yellow,
-        ternary:green,
+        ternary: green,
         bgColorGrey: {
             light: '#ebebeb',
             medium: '#b0aeae',
@@ -22,5 +22,11 @@ export const theme = createTheme({
         textAlign: "center",
         paddingTop: 1,
     },
+    logoContainer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        textDecoration: "none",
+    }
 
 });

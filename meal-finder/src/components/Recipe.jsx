@@ -1,25 +1,45 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { recipe } from "../api/recipe";
-import { Box, CircularProgress, Typography } from "@mui/material";
+import {
+  Box,
+  CircularProgress,
+  List,
+  ListItem,
+  ListItemText,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 const Recipe = () => {
   const { id } = useParams();
 
-  const { data, error, isLoading } = useQuery({
+  const { data: meal, error, isLoading } = useQuery({
     queryKey: ["recipe"],
-    queryFn: () => recipe(id)
+    queryFn: () => recipe(id),
   });
 
   if (error) return <Box>{error.message}</Box>;
-
+  console.log(meal);
   return (
     <>
-      {isLoading && <CircularProgress />}
+      <Stack direction={{ sm: "column", md: "row" }} marginTop={5} gap={6}>
+        {isLoading && <CircularProgress />}
 
-      <Typography>{data?.meals[0].strMeal}</Typography>
-      <img src={data?.meals[0].strMealThumb} width={"30%"}/>
+        <Box>
+          <img src={meal?.strMealThumb} alt={meal?.strMeal} width={"100%"} />
+        </Box>
+
+        <Box textAlign="left">
+          <Typography variant="h4">{meal?.strMeal}</Typography>
+          <List>
+            <ListItem>
+              <ListItemText primary={meal?.strIngredient1} />
+            </ListItem>
+          </List>
+        </Box>
+      </Stack>
     </>
   );
 };
