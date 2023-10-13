@@ -5,7 +5,7 @@ import Category from "./Pages/Category";
 import { Container } from "@mui/material";
 import { NavBar } from "./components";
 import Footer from "./components/Footer";
-import Recipe from "./components/Recipe";
+import Recipe from "./Pages/Recipe";
 
 function App() {
   return (
