@@ -265,8 +265,8 @@ const resultStatus: Exclude<ResultStatusType, "pending"> = "completed";
 
 // Method 2
 type FoodType = {
-  [index:string]:any;
-}
+  [index: string]: any;
+};
 
 const foodData: FoodType = {
   PIZZA: "pepporoni",
@@ -275,3 +275,5 @@ const foodData: FoodType = {
 };
 
 console.log(foodData);
+
+// any/unknown/void/null
