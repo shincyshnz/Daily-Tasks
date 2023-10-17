@@ -260,12 +260,18 @@ const resultStatus: Exclude<ResultStatusType, "pending"> = "completed";
 
 // 6) If you don't know the type of result yo are getting you can use record to create type
 
-type FoodType = Record<string, any>;
+// Method 1
+// type FoodType = Record<string, any>;
+
+// Method 2
+type FoodType = {
+  [index:string]:any;
+}
 
 const foodData: FoodType = {
   PIZZA: "pepporoni",
   BURGER: "chiken",
-  QUANTITY: "1",
+  QUANTITY: 1,
 };
 
 console.log(foodData);
